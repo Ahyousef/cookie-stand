@@ -1,0 +1,21 @@
+.title {
+    margin-left: 650px;
+    margin-top: 0px;
+    padding-top: 35px;
+}
+
+nav {
+    border: red 3px solid;
+    margin-top: 30px;
+}
+
+nav li{
+    display: inline;
+    border: 3px black solid;
+    margin: 50px 3px 3px 325px;
+}
+
+main p {
+    font-size: 100px;
+    text-align: center;
+}
