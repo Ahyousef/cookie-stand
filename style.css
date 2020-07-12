@@ -1,21 +1,48 @@
 .title {
-    margin-left: 650px;
+    margin-left: 600px;
     margin-top: 0px;
     padding-top: 35px;
 }
 
 nav {
-    border: red 3px solid;
     margin-top: 30px;
+    background-color: rgba(255, 0, 0, 0.521);
 }
 
 nav li{
     display: inline;
-    border: 3px black solid;
-    margin: 50px 3px 3px 325px;
+    margin: 50px 3px 3px 280px;
+    font-size: 20pt;
 }
 
-main p {
-    font-size: 100px;
+header {
+    background-image: url("https://i.ytimg.com/vi/SpnJVwVVNO0/maxresdefault.jpg") ;
+    width: 1358px;
+    margin-left: 0px;
+}
+body{
+    background-image: url("https://wallpaper-house.com/data/out/10/wallpaper2you_373651.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#page {
+    font-size: 72px;
     text-align: center;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+ul{
+    float: left;
+    background-color: rgba(43, 174, 184, 0.658);
+    margin-left: 40px;
+    width: 180px;
+
+}
+button{
+    font-size: 36px;
+    background-color: rgb(228, 78, 19);
+    border-radius: 15px;
+    margin-left: 600px;   
+    margin-bottom: 30px; 
 }
