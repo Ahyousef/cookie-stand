@@ -2,6 +2,8 @@
 
 var timeArray = ["6AM", "7AM", "8AM", "9AM", "10AM", "11AM", "12PM", "1PM", "2PM", "3PM", "4PM", "5PM", "6PM", "7PM"];
 
+var hourlyTotals = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+
 function CityConst(name, minCust, maxCust, avgSale, Array) {
     this.name = name;
     this.minCust = minCust;
@@ -18,6 +20,7 @@ CityConst.prototype.randomCus = function () {
 CityConst.prototype.cookiesList = function () {
     for (let index = 0; index < timeArray.length; index++) {
         var cookies = Math.round(this.randomCus() * this.avgSale);
+        hourlyTotals[index] += cookies;
         this.Array.push(cookies);
     };
 };
@@ -26,6 +29,7 @@ CityConst.prototype.totalCookies = function () {
     for (let index = 0; index < this.Array.length; index++) {
         this.total += parseInt(this.Array[index]);
     };
+    hourlyTotals[hourlyTotals.length-1] += this.total;
     return this.total;
 };
 
@@ -87,7 +91,7 @@ function footer() {
     row.append(Totals);
     for (let index = 0; index < timeArray.length+1; index++) {
         var data = document.createElement("td");
-        data.textContent = "yet to be made";
+        data.textContent = hourlyTotals[index];
         row.append(data);
     };
     table.append(row);
@@ -105,7 +109,9 @@ function displayAll() {
             cityNames[index].render();
         };
         footer()
+        console.log(hourlyTotals);
         displayed = true;
 
     };
 };
+

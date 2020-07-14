@@ -2,16 +2,18 @@
     margin-left: 600px;
     margin-top: 0px;
     padding-top: 35px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 nav {
     margin-top: 30px;
     background-color: rgba(255, 0, 0, 0.521);
+    height: 35px;
 }
 
 nav li{
     display: inline;
-    margin: 50px 3px 3px 280px;
+    margin: 40px 3px 3px 295px;
     font-size: 20pt;
 }
 
@@ -51,6 +53,7 @@ button{
 
 table {
     background-color: rgba(240, 128, 128, 0.575);
+    margin-left: 300px;
 }
 table ,th, td {
     border:  1px solid black;
@@ -60,3 +63,78 @@ table ,th, td {
 th {
     font-style: italic;
 }
+
+#subtitles {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 48px;
+    color: maroon;
+    background-color: rgba(25, 25, 112, 0.226);
+}
+
+#locations {
+    display: inline-block;
+    border: 5px black solid;
+    width: 1330px;
+    margin-bottom: 20px;
+}
+#locations img {
+    float: left;
+    width: 580px;
+    margin-right: 0px;
+}
+#locations p {
+    text-align: center;
+    font-size: 46px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+#locations section { 
+    float: right;
+    margin-right: 10px;
+    background-color: rgba(25, 25, 112, 0.226);
+    height: 338px
+}
+
+#locations ul {
+    background-color:rgba(176, 224, 230, 0.527) ;
+    margin-left: 0px;
+    width: 280px;
+}
+
+#locations li {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+#products {
+    display: inline-block;
+    border: 5px black solid;
+    width: 1330px;
+    margin-bottom: 20px;
+}
+
+#products #subtitles{
+    margin-bottom: 25px;
+}
+
+#products img {
+    width: 250px;
+    height: 250px;
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: grey;
+    height: 30px;
+    margin-bottom: 0px;
+    padding-top: 10px;
+}
+
+footer p {
+    display: inline;
+    font-size: 18px;
+    color: white;
+}
+
