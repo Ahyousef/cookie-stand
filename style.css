@@ -28,6 +28,13 @@ body{
     background-position: center;
     background-repeat: no-repeat;
 }
+
+.darkBody{
+    background-image: url("Pictures/darkBackground.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 #page {
     font-size: 72px;
     text-align: center;
@@ -64,13 +71,14 @@ th {
     font-style: italic;
 }
 
-#subtitles {
+.subtitles {
     text-align: center;
     margin-top: 20px;
     font-size: 48px;
     color: maroon;
     background-color: rgba(25, 25, 112, 0.226);
 }
+
 
 #locations {
     display: inline-block;

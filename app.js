@@ -115,3 +115,8 @@ function displayAll() {
     };
 };
 
+function darkTheme(){
+    var body = document.body;
+    body.classList.toggle("darkBody");
+    var sub = document.getElementsByClassName("subtitles");
+}
