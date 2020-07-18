@@ -4,12 +4,12 @@ var timeArray = ["6AM", "7AM", "8AM", "9AM", "10AM", "11AM", "12PM", "1PM", "2PM
 
 var hourlyTotals = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
 
-function CityConst(name, minCust, maxCust, avgSale, Array) {
+function CityConst(name, minCust, maxCust, avgSale) {
     this.name = name;
     this.minCust = minCust;
     this.maxCust = maxCust;
     this.avgSale = avgSale;
-    this.Array = Array;
+    this.Array = [];
     this.total = 0;
 }
 
@@ -52,11 +52,11 @@ CityConst.prototype.render = function () {
 
 
 
-var Seattle = new CityConst("Seattle", 23, 65, 6.3, []);
-var Tokyo = new CityConst("Tokyo", 3, 24, 1.2, []);
-var Dubai = new CityConst("Dubai", 11, 38, 3.7, []);
-var Paris = new CityConst("Paris", 20, 38, 2.3, []);
-var Lima = new CityConst("Lima", 2, 16, 4.6, []);
+var Seattle = new CityConst("Seattle", 23, 65, 6.3);
+var Tokyo = new CityConst("Tokyo", 3, 24, 1.2);
+var Dubai = new CityConst("Dubai", 11, 38, 3.7);
+var Paris = new CityConst("Paris", 20, 38, 2.3);
+var Lima = new CityConst("Lima", 2, 16, 4.6);
 
 
 
@@ -120,3 +120,29 @@ function darkTheme(){
     body.classList.toggle("darkBody");
     var sub = document.getElementsByClassName("subtitles");
 }
+
+
+var standForm = document.getElementById("standForm");
+
+standForm.addEventListener('submit',function(){
+    event.preventDefault();
+
+    var cityNameValue = event.target.cityName.value;
+
+    var minCusValue = event.target.minCus.value;
+
+    var maxCusValue = event.target.maxCus.value;
+    
+    var avgSaleValue = event.target.avgSale.value;
+
+    var newCity = new CityConst(
+        cityNameValue,
+        minCusValue,
+        maxCusValue,
+        avgSaleValue
+    )
+    newCity.randomCus();
+    newCity.cookiesList();
+    newCity.totalCookies();
+    newCity.render()
+});
