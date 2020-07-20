@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cookie Stand</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header>
         <div>
@@ -14,9 +16,15 @@
             <h1 class="title">Cookie Stand</h1>
         </div>
         <nav>
-            <a href="index.html"><li>Home</li></a>
-            <a href="sales.html"><li>Sales</li></a>
-            <a href="store.html"><li>Store</li></a>
+            <a href="index.html">
+                <li>Home</li>
+            </a>
+            <a href="sales.html">
+                <li>Sales</li>
+            </a>
+            <a href="store.html">
+                <li>Store</li>
+            </a>
         </nav>
     </header>
     <main>
@@ -24,36 +32,38 @@
         <button style="margin: 10px 0px 10px 570px" onclick="darkTheme()">Theme Switch</button>
         <div id="parent"></div>
         <form id="standForm">
-        <fieldset>
-            <legend>
-                Submit for a new cookie stand
-            </legend>
-            <table>
-                <tr>
-                    <td>
-                        <label for="cityName">City Name: </label>
-                    </td>
-                    <td>
-                        <input required type="text" id="cityName">
-                    </td>
-                </tr>
-                <tr>
-                    <td><label for="minCus">Minimum Customers: </label></td>
-                    <td><input required type="text" id="minCus"></td>
-                </tr>
-                <tr>
-                    <td><label for="maxCus">Maximum Customers: </label></td>
-                    <td><input required type="text" id="maxCus"></td>
-                </tr>
-                <tr>
-                    <td><label for="avgSale">Average cookies sold: </label></td>
-                    <td><input required type="text" id="avgSale"></td>
-                </tr>
-                <td><input required type="submit" value="Submit cat for adoption"></td>
-            </table>
-        </fieldset>
-    </form>
+            <fieldset>
+                <legend>
+                    Submit for a new cookie stand
+                </legend>
+                <table>
+                    <tr>
+                        <td>
+                            <label for="cityName">City Name: </label>
+                        </td>
+                        <td>
+                            <input required type="text" id="cityName">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="minCus">Minimum Customers: </label></td>
+                        <td><input required type="text" id="minCus"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="maxCus">Maximum Customers: </label></td>
+                        <td><input required type="text" id="maxCus"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="avgSale">Average cookies sold: </label></td>
+                        <td><input required type="text" id="avgSale"></td>
+                    </tr>
+                    <td><input id="submit" required type="submit" value="Submit stand"></td>
+                </table>
+            </fieldset>
+        </form>
+
     </main>
     <script src="app.js"></script>
 </body>
+
 </html>

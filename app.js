@@ -2,7 +2,7 @@
 
 var timeArray = ["6AM", "7AM", "8AM", "9AM", "10AM", "11AM", "12PM", "1PM", "2PM", "3PM", "4PM", "5PM", "6PM", "7PM"];
 
-var hourlyTotals = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+var hourlyTotals = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
 function CityConst(name, minCust, maxCust, avgSale) {
     this.name = name;
@@ -18,6 +18,7 @@ CityConst.prototype.randomCus = function () {
 };
 
 CityConst.prototype.cookiesList = function () {
+    this.Array = [];
     for (let index = 0; index < timeArray.length; index++) {
         var cookies = Math.round(this.randomCus() * this.avgSale);
         hourlyTotals[index] += cookies;
@@ -29,7 +30,7 @@ CityConst.prototype.totalCookies = function () {
     for (let index = 0; index < this.Array.length; index++) {
         this.total += parseInt(this.Array[index]);
     };
-    hourlyTotals[hourlyTotals.length-1] += this.total;
+    hourlyTotals[hourlyTotals.length - 1] += this.total;
     return this.total;
 };
 
@@ -89,7 +90,7 @@ function footer() {
     var Totals = document.createElement("th");
     Totals.innerHTML = "Totals"
     row.append(Totals);
-    for (let index = 0; index < timeArray.length+1; index++) {
+    for (let index = 0; index < timeArray.length + 1; index++) {
         var data = document.createElement("td");
         data.textContent = hourlyTotals[index];
         row.append(data);
@@ -109,13 +110,12 @@ function displayAll() {
             cityNames[index].render();
         };
         footer()
-        console.log(hourlyTotals);
         displayed = true;
 
     };
 };
 
-function darkTheme(){
+function darkTheme() {
     var body = document.body;
     body.classList.toggle("darkBody");
     var sub = document.getElementsByClassName("subtitles");
@@ -124,7 +124,15 @@ function darkTheme(){
 
 var standForm = document.getElementById("standForm");
 
-standForm.addEventListener('submit',function(){
+submit.onclick = () => {
+    debugger
+    var myNode = document.getElementById("parent");
+    myNode.innerHTML = '';
+    table.innerHTML =''
+    hourlyTotals = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+  }
+
+standForm.addEventListener('submit', function () {
     event.preventDefault();
 
     var cityNameValue = event.target.cityName.value;
@@ -132,7 +140,7 @@ standForm.addEventListener('submit',function(){
     var minCusValue = event.target.minCus.value;
 
     var maxCusValue = event.target.maxCus.value;
-    
+
     var avgSaleValue = event.target.avgSale.value;
 
     var newCity = new CityConst(
@@ -141,8 +149,11 @@ standForm.addEventListener('submit',function(){
         maxCusValue,
         avgSaleValue
     )
-    newCity.randomCus();
-    newCity.cookiesList();
-    newCity.totalCookies();
-    newCity.render()
+    cityNames.push(newCity);
+
+        displayed = false;
+        displayAll();
+
 });
+
+
